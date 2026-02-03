@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Foodie - Order Food Online</title>
+    <style>
+       
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+
+header {
+    background-color: #e23744;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ffd6d6;
+}
+
+
+.hero {
+    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('https://via.placeholder.com/1200x400') center/cover;
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    background-color: #e23744;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.hero button:hover {
+    background-color: #c62828;
+    transform: scale(1.1);
+}
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero {
+    background: linear-gradient(
+        -45deg,
+        #690f6a,
+        #b72ec9,
+        #c672ae,
+        #97768d
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #104c87; }
+    50% { box-shadow: 0 0 20px #7fafda; }
+    100% { box-shadow: 0 0 5px #2f4297; }
+}
+
+.hero button {
+    animation: glow 2s infinite;
+}
+
+
+
+
+.food-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.food-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+
+.food-card {
+    background-color: white;
+    width: 250px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.food-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.image-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-box img {
+    width: 100%;
+    transition: transform 0.4s;
+}
+
+.image-box:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(226, 55, 68, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.image-box:hover .overlay {
+    opacity: 1;
+}
+
+
+.food-card button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background-color: #e23744;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.food-card button:hover {
+    background-color: #c62828;
+}
+
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+
+    </style>
+</head>
+<body>
+
+   
+    <header>
+        <h1 class="logo">Foodie</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">Order</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+   
+    <section class="hero">
+        <h2>Order Your Favorite Food</h2>
+        <p>Fresh • Fast • Delicious</p>
+        <button>Order Now</button>
+    </section>
+
+    <section class="food-section">
+        <h2>Popular Items</h2>
+
+        <div class="food-container">
+
+            <div class="food-card">
+    <div class="image-box">
+        <img src="https://www.foodandwine.com/thmb/iJw7N_NfcPpd-EB8rpYbzrkSFIM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tomato-mozzarella-pizza-FT-RECIPE0725-e7244e979c504188a049623668c15b2e.jpg" alt="Pizza">
+        <div class="overlay">Order Now</div>
+    </div>
+    <h3>Pizza</h3>
+    <p>₹299</p>
+    <button>Add to Cart</button>
+</div>
+
+<div class="food-card">
+    <div class="image-box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz6r-wxppuNufieTmNnkjDLMepyG0m929Viw&s" alt="Burger">
+        <div class="overlay">Order Now</div>
+    </div>
+    <h3>Burger</h3>
+    <p>₹149</p>
+    <button>Add to Cart</button>
+</div>
+
+<div class="food-card">
+    <div class="image-box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2GdONND7h9AnvHdcGPhL37-U7wfJU7JgeAQ&s" alt="Biryani">
+        <div class="overlay">Order Now</div>
+    </div>
+    <h3>Biryani</h3>
+    <p>₹249</p>
+    <button>Add to Cart</button>
+</div>
+
+
+        </div>
+    </section>
+
+ 
+    <footer>
+        <p>© 2026 Foodie. All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>
